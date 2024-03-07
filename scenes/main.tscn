@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://b414gs8ofpj8b"]
+
+[ext_resource type="MeshLibrary" uid="uid://cnuvf6adgl33v" path="res://prefabs/mesh libraries/block_library.tres" id="1_h5mo5"]
+[ext_resource type="PackedScene" uid="uid://8rt1e0bux4fe" path="res://prefabs/camera.tscn" id="2_5sui8"]
+[ext_resource type="Script" path="res://prefabs/maps/map.gd" id="2_appjj"]
+[ext_resource type="PackedScene" uid="uid://duw1p02tinavo" path="res://characters/witch.tscn" id="3_61jft"]
+
+[node name="main" type="Node3D"]
+
+[node name="GridMap" type="GridMap" parent="."]
+mesh_library = ExtResource("1_h5mo5")
+cell_size = Vector3(1, 1, 1)
+cell_center_y = false
+data = {
+"cells": PackedInt32Array(-65536, 0, 8, -65535, 0, 8, -65534, 0, 8, -65533, 0, 8, -65532, 2, 4, -65532, 3, 4, -65532, 4, 4, -65533, 4, 4, -65534, 4, 4, -65535, 4, 4, -65536, 4, 8, -65536, 3, 8, -65536, 2, 8, -65535, 1, 4, -65534, 1, 4, -65533, 1, 4, -65533, 2, 4, -65534, 2, 4, -65535, 3, 4, -65534, 3, 4, -65533, 3, 4, 4, 0, 8, 3, 0, 8, 2, 0, 8, 1, 0, 8, 0, 0, 8, 0, 1, 8, 0, 2, 8, 0, 3, 8, 0, 4, 8, 65536, 4, 8, 65536, 3, 8, 65536, 2, 8, 65536, 1, 8, 65536, 0, 8, 65537, 0, 8, 65538, 0, 8, 65539, 0, 8, 65540, 0, 8, -65532, 1, 4, -65532, 0, 8, -65535, 2, 4, -65536, 1, 8, 1, 1, 1, 2, 1, 1, 3, 1, 1, 4, 1, 1)
+}
+script = ExtResource("2_appjj")
+metadata/_editor_floor_ = Vector3(0, 0, 0)
+
+[node name="focus" parent="." instance=ExtResource("2_5sui8")]
+transform = Transform3D(0.707107, -0.353553, 0.612372, 0, 0.866025, 0.5, -0.707107, -0.353553, 0.612372, 2.45112, 0, 2.47289)
+
+[node name="pawns" type="Node3D" parent="."]
+
+[node name="witch" parent="pawns" instance=ExtResource("3_61jft")]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 2.7, 0, 3.6)
+
+[editable path="focus"]

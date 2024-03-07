@@ -1,0 +1,35 @@
+[gd_scene load_steps=9 format=3 uid="uid://cexiwbhh7vfo6"]
+
+[ext_resource type="PackedScene" uid="uid://cdbr7mvgjxm8v" path="res://models/dirt_block.blend" id="1_60337"]
+[ext_resource type="PackedScene" uid="uid://dejsuytlswurn" path="res://models/dirt_step.blend" id="2_u532t"]
+[ext_resource type="PackedScene" uid="uid://cndetyxdopkhu" path="res://models/grass_block.blend" id="3_68564"]
+[ext_resource type="PackedScene" uid="uid://df4xu5k0euxyq" path="res://models/grass_step.blend" id="4_8n66i"]
+[ext_resource type="PackedScene" uid="uid://4v6lanyoqwc7" path="res://models/ruin_block.blend" id="5_sq7cm"]
+[ext_resource type="PackedScene" uid="uid://cd11x1d1qpw1m" path="res://models/ruin_step.blend" id="6_8heh5"]
+[ext_resource type="PackedScene" uid="uid://djaw5egb31kjt" path="res://models/stone_block.blend" id="7_vvq3k"]
+[ext_resource type="PackedScene" uid="uid://bo2pk5op1btj5" path="res://models/stone_step.blend" id="8_6tm81"]
+
+[node name="Mesh Library" type="Node3D"]
+
+[node name="dirt_block" parent="." instance=ExtResource("1_60337")]
+
+[node name="dirt_step2" parent="." instance=ExtResource("2_u532t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.38419e-07, -1)
+
+[node name="grass_block2" parent="." instance=ExtResource("3_68564")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2)
+
+[node name="grass_step2" parent="." instance=ExtResource("4_8n66i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3)
+
+[node name="ruin_block2" parent="." instance=ExtResource("5_sq7cm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4)
+
+[node name="ruin_step2" parent="." instance=ExtResource("6_8heh5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5)
+
+[node name="stone_block2" parent="." instance=ExtResource("7_vvq3k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -6)
+
+[node name="stone_step2" parent="." instance=ExtResource("8_6tm81")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -7)

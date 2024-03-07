@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://bat1vg73k4e33"]
+
+[ext_resource type="PackedScene" uid="uid://b414gs8ofpj8b" path="res://scenes/main.tscn" id="1_22iuf"]
+
+[node name="pixelated" type="Node3D"]
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stretch = true
+
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer"]
+handle_input_locally = false
+size = Vector2i(1920, 1080)
+render_target_update_mode = 4
+
+[node name="main" parent="SubViewportContainer/SubViewport" instance=ExtResource("1_22iuf")]

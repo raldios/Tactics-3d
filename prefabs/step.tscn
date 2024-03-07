@@ -1,0 +1,47 @@
+[gd_scene load_steps=5 format=3 uid="uid://c6gforge5sb4h"]
+
+[ext_resource type="Texture2D" uid="uid://nis1v2648ias" path="res://models/step.png" id="1_sf8g4"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kylq2"]
+resource_name = "Material"
+cull_mode = 2
+shading_mode = 0
+albedo_texture = ExtResource("1_sf8g4")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_vms2j"]
+_surfaces = [{
+"aabb": AABB(-0.5, 0, -0.5, 1.00001, 0.50001, 1),
+"format": 34896613377,
+"index_count": 18,
+"index_data": PackedByteArray(0, 0, 5, 0, 4, 0, 0, 0, 2, 0, 5, 0, 3, 0, 5, 0, 2, 0, 3, 0, 6, 0, 5, 0, 1, 0, 2, 0, 0, 0, 1, 0, 3, 0, 2, 0),
+"name": "Material",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 7,
+"vertex_data": PackedByteArray(254, 255, 253, 255, 0, 0, 0, 0, 254, 255, 0, 0, 0, 0, 0, 0, 254, 255, 253, 255, 255, 255, 0, 0, 254, 255, 0, 0, 255, 255, 0, 0, 0, 0, 253, 255, 0, 0, 0, 0, 0, 0, 253, 255, 255, 255, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_d1ulp"]
+resource_name = "step_Cube"
+_surfaces = [{
+"aabb": AABB(-0.5, 0, -0.5, 1.00001, 0.50001, 1),
+"attribute_data": PackedByteArray(0, 0, 255, 127, 255, 255, 255, 191, 255, 127, 255, 191, 255, 127, 255, 191, 0, 0, 0, 0, 255, 255, 255, 127, 0, 0, 255, 191, 255, 127, 255, 127, 255, 127, 255, 127, 255, 127, 255, 127, 255, 127, 0, 0, 0, 0, 255, 127),
+"format": 34896613399,
+"index_count": 18,
+"index_data": PackedByteArray(0, 0, 10, 0, 8, 0, 0, 0, 4, 0, 10, 0, 6, 0, 9, 0, 3, 0, 6, 0, 11, 0, 9, 0, 2, 0, 5, 0, 1, 0, 2, 0, 7, 0, 5, 0),
+"material": SubResource("StandardMaterial3D_kylq2"),
+"name": "Material",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 12,
+"vertex_data": PackedByteArray(254, 255, 253, 255, 0, 0, 255, 255, 254, 255, 253, 255, 0, 0, 84, 213, 254, 255, 0, 0, 0, 0, 84, 213, 254, 255, 253, 255, 255, 255, 255, 191, 254, 255, 253, 255, 255, 255, 255, 255, 254, 255, 253, 255, 255, 255, 84, 213, 254, 255, 0, 0, 255, 255, 255, 191, 254, 255, 0, 0, 255, 255, 84, 213, 0, 0, 253, 255, 0, 0, 255, 255, 0, 0, 253, 255, 255, 255, 255, 191, 0, 0, 253, 255, 255, 255, 255, 255, 0, 0, 0, 0, 255, 255, 255, 191, 255, 127, 255, 191, 170, 42, 170, 42, 170, 42, 170, 42, 255, 255, 255, 255, 255, 127, 255, 191, 170, 42, 170, 42, 255, 255, 255, 255, 170, 42, 170, 42, 255, 127, 255, 191, 255, 255, 255, 255, 255, 127, 255, 191, 255, 255, 255, 255)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_vms2j")
+
+[node name="step" type="Node3D"]
+
+[node name="step" type="MeshInstance3D" parent="."]
+mesh = SubResource("ArrayMesh_d1ulp")
+skeleton = NodePath("")
