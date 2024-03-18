@@ -3,8 +3,16 @@
 [node name="focus" type="Node3D"]
 transform = Transform3D(0.707107, -0.353553, 0.612372, 0, 0.866025, 0.5, -0.707107, -0.353553, 0.612372, 0.5, 0, 0.5)
 
-[node name="cam" type="Camera3D" parent="."]
+[node name="terrain_cam" type="Camera3D" parent="."]
+unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 10)
-cull_mask = 1047553
+cull_mask = 2
+projection = 1
+size = 8.0
+
+[node name="sprite_cam" type="Camera3D" parent="."]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, -5.96046e-07, 0, -2.98023e-08, 1, 0, 0, 10)
+cull_mask = 1047554
 projection = 1
 size = 8.0

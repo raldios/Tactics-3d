@@ -1,0 +1,49 @@
+[gd_scene load_steps=8 format=3 uid="uid://d4j6hysl8jsse"]
+
+[ext_resource type="Script" path="res://prefabs/tile_selector.gd" id="1_7bbww"]
+[ext_resource type="Texture2D" uid="uid://cx2oi2myhkfd4" path="res://sprites/TileSelectSquare.png" id="1_d2ady"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qn72b"]
+atlas = ExtResource("1_d2ady")
+region = Rect2(0, 128, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f1ogr"]
+atlas = ExtResource("1_d2ady")
+region = Rect2(128, 128, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3u644"]
+atlas = ExtResource("1_d2ady")
+region = Rect2(256, 128, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1dbe6"]
+atlas = ExtResource("1_d2ady")
+region = Rect2(384, 128, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_b0n37"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qn72b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f1ogr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3u644")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1dbe6")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="tile_selector" type="Node3D"]
+visible = false
+script = ExtResource("1_7bbww")
+
+[node name="sprite" type="AnimatedSprite3D" parent="."]
+transform = Transform3D(0.75, 0, 0, 0, -3.27835e-08, 0.75, 0, -0.75, -3.27835e-08, 0, 0.05, 0)
+sprite_frames = SubResource("SpriteFrames_b0n37")
+autoplay = "default"

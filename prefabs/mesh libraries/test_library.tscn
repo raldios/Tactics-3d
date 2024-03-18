@@ -1,35 +1,36 @@
 [gd_scene load_steps=9 format=3 uid="uid://cexiwbhh7vfo6"]
 
-[ext_resource type="PackedScene" uid="uid://cdbr7mvgjxm8v" path="res://models/dirt_block.blend" id="1_60337"]
-[ext_resource type="PackedScene" uid="uid://dejsuytlswurn" path="res://models/dirt_step.blend" id="2_u532t"]
-[ext_resource type="PackedScene" uid="uid://cndetyxdopkhu" path="res://models/grass_block.blend" id="3_68564"]
-[ext_resource type="PackedScene" uid="uid://df4xu5k0euxyq" path="res://models/grass_step.blend" id="4_8n66i"]
-[ext_resource type="PackedScene" uid="uid://4v6lanyoqwc7" path="res://models/ruin_block.blend" id="5_sq7cm"]
-[ext_resource type="PackedScene" uid="uid://cd11x1d1qpw1m" path="res://models/ruin_step.blend" id="6_8heh5"]
-[ext_resource type="PackedScene" uid="uid://djaw5egb31kjt" path="res://models/stone_block.blend" id="7_vvq3k"]
-[ext_resource type="PackedScene" uid="uid://bo2pk5op1btj5" path="res://models/stone_step.blend" id="8_6tm81"]
+[ext_resource type="PackedScene" uid="uid://c4f36pfbsitnj" path="res://prefabs/meshes/blocks/dirt_block.tscn" id="1_at57e"]
+[ext_resource type="PackedScene" uid="uid://bgfngq8xx6hmb" path="res://prefabs/meshes/blocks/grass_block.tscn" id="1_n8rsh"]
+[ext_resource type="PackedScene" uid="uid://dljom3p81tyja" path="res://prefabs/meshes/blocks/dirt_step.tscn" id="2_7ruk8"]
+[ext_resource type="PackedScene" uid="uid://c3aca6f50gu4l" path="res://prefabs/meshes/blocks/grass_step.tscn" id="4_1cx5j"]
+[ext_resource type="PackedScene" uid="uid://ciujyon5yjuht" path="res://prefabs/meshes/blocks/ruin_block.tscn" id="5_t2qcw"]
+[ext_resource type="PackedScene" uid="uid://dcdausjne4o2d" path="res://prefabs/meshes/blocks/ruin_step.tscn" id="6_rmmsc"]
+[ext_resource type="PackedScene" uid="uid://c3ujh6kvgh7gg" path="res://prefabs/meshes/blocks/stone_block.tscn" id="7_fux8t"]
+[ext_resource type="PackedScene" uid="uid://88vkbpmio3he" path="res://prefabs/meshes/blocks/stone_step.tscn" id="8_whjfn"]
 
 [node name="Mesh Library" type="Node3D"]
 
-[node name="dirt_block" parent="." instance=ExtResource("1_60337")]
+[node name="dirt_block" parent="." instance=ExtResource("1_at57e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.0125272)
 
-[node name="dirt_step2" parent="." instance=ExtResource("2_u532t")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.38419e-07, -1)
+[node name="dirt_step" parent="." instance=ExtResource("2_7ruk8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
 
-[node name="grass_block2" parent="." instance=ExtResource("3_68564")]
+[node name="grass_block" parent="." instance=ExtResource("1_n8rsh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2)
 
-[node name="grass_step2" parent="." instance=ExtResource("4_8n66i")]
+[node name="grass_step" parent="." instance=ExtResource("4_1cx5j")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3)
 
-[node name="ruin_block2" parent="." instance=ExtResource("5_sq7cm")]
+[node name="ruin_block" parent="." instance=ExtResource("5_t2qcw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4)
 
-[node name="ruin_step2" parent="." instance=ExtResource("6_8heh5")]
+[node name="ruin_step" parent="." instance=ExtResource("6_rmmsc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5)
 
-[node name="stone_block2" parent="." instance=ExtResource("7_vvq3k")]
+[node name="stone_block" parent="." instance=ExtResource("7_fux8t")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -6)
 
-[node name="stone_step2" parent="." instance=ExtResource("8_6tm81")]
+[node name="stone_step" parent="." instance=ExtResource("8_whjfn")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -7)

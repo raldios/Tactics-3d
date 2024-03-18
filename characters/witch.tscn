@@ -1,12 +1,75 @@
-[gd_scene load_steps=2 format=3 uid="uid://duw1p02tinavo"]
+[gd_scene load_steps=11 format=3 uid="uid://duw1p02tinavo"]
 
-[ext_resource type="Texture2D" uid="uid://cb00jbnrm0gq2" path="res://sprites/CharacterConcepts.png" id="1_chio8"]
+[ext_resource type="Texture2D" uid="uid://difo4dr2nrx6h" path="res://sprites/VampireWalkCycleBig.png" id="1_7gifp"]
+[ext_resource type="Script" path="res://characters/pawn.gd" id="1_jm6x1"]
+[ext_resource type="PackedScene" uid="uid://c8p5wqdoax8r0" path="res://components/move_component.tscn" id="2_grvp1"]
 
-[node name="witch" type="Sprite3D"]
-transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 1.7, 1, 3.6)
-offset = Vector2(0, 16)
+[sub_resource type="AtlasTexture" id="AtlasTexture_qv08g"]
+atlas = ExtResource("1_7gifp")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_luol4"]
+atlas = ExtResource("1_7gifp")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u0gwx"]
+atlas = ExtResource("1_7gifp")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3fckc"]
+atlas = ExtResource("1_7gifp")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_222ra"]
+atlas = ExtResource("1_7gifp")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cdmag"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qv08g")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_luol4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u0gwx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3fckc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_222ra")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 4.0
+}]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_tfjij"]
+height = 1.0
+
+[node name="witch" type="CharacterBody3D"]
+script = ExtResource("1_jm6x1")
+
+[node name="sprite" type="AnimatedSprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.65, 0)
+layers = 2
+flip_h = true
 billboard = 1
 texture_filter = 0
-texture = ExtResource("1_chio8")
-region_enabled = true
-region_rect = Rect2(0, 32, 32, 32)
+sprite_frames = SubResource("SpriteFrames_cdmag")
+animation = &"walk"
+autoplay = "idle"
+
+[node name="move_component" parent="." instance=ExtResource("2_grvp1")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+shape = SubResource("CylinderShape3D_tfjij")

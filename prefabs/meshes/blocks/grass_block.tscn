@@ -1,0 +1,106 @@
+[gd_scene load_steps=13 format=3 uid="uid://bgfngq8xx6hmb"]
+
+[ext_resource type="Texture2D" uid="uid://di3jlmdcl5lxj" path="res://models/Textures/GrassBlockUVsBig.png" id="1_nt2u7"]
+[ext_resource type="Script" path="res://prefabs/meshes/blocks/static_body.gd" id="3_c2kqu"]
+[ext_resource type="Texture2D" uid="uid://cx2oi2myhkfd4" path="res://sprites/TileSelectSquare.png" id="3_cwg8d"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6g7dc"]
+resource_name = "Material"
+cull_mode = 2
+shading_mode = 0
+albedo_texture = ExtResource("1_nt2u7")
+texture_filter = 2
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_yf8xb"]
+_surfaces = [{
+"aabb": AABB(-0.5, 0, -0.5, 1.00001, 1.00001, 1),
+"format": 34896613377,
+"index_count": 18,
+"index_data": PackedByteArray(0, 0, 5, 0, 4, 0, 0, 0, 2, 0, 5, 0, 3, 0, 5, 0, 2, 0, 3, 0, 6, 0, 5, 0, 1, 0, 2, 0, 0, 0, 1, 0, 3, 0, 2, 0),
+"name": "Material",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 7,
+"vertex_data": PackedByteArray(254, 255, 254, 255, 0, 0, 0, 0, 254, 255, 0, 0, 0, 0, 0, 0, 254, 255, 254, 255, 255, 255, 0, 0, 254, 255, 0, 0, 255, 255, 0, 0, 0, 0, 254, 255, 0, 0, 0, 0, 0, 0, 254, 255, 255, 255, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_kb3ho"]
+resource_name = "dirt_block_Cube"
+_surfaces = [{
+"aabb": AABB(-0.5, 0, -0.5, 1.00001, 1.00001, 1),
+"attribute_data": PackedByteArray(255, 191, 255, 127, 255, 255, 255, 191, 255, 255, 255, 255, 255, 191, 255, 191, 255, 191, 255, 191, 255, 191, 255, 191, 255, 191, 255, 255, 255, 191, 255, 255, 255, 127, 255, 127, 255, 127, 255, 191, 255, 127, 255, 191, 255, 127, 255, 255),
+"format": 34896613399,
+"index_count": 18,
+"index_data": PackedByteArray(0, 0, 10, 0, 8, 0, 0, 0, 4, 0, 10, 0, 6, 0, 9, 0, 3, 0, 6, 0, 11, 0, 9, 0, 2, 0, 5, 0, 1, 0, 2, 0, 7, 0, 5, 0),
+"material": SubResource("StandardMaterial3D_6g7dc"),
+"name": "Material",
+"primitive": 3,
+"uv_scale": Vector4(2, 2, 0, 0),
+"vertex_count": 12,
+"vertex_data": PackedByteArray(254, 255, 254, 255, 0, 0, 255, 191, 254, 255, 254, 255, 0, 0, 255, 191, 254, 255, 0, 0, 0, 0, 255, 191, 254, 255, 254, 255, 255, 255, 255, 127, 254, 255, 254, 255, 255, 255, 255, 191, 254, 255, 254, 255, 255, 255, 255, 191, 254, 255, 0, 0, 255, 255, 255, 127, 254, 255, 0, 0, 255, 255, 255, 191, 0, 0, 254, 255, 0, 0, 255, 191, 0, 0, 254, 255, 255, 255, 255, 127, 0, 0, 254, 255, 255, 255, 255, 191, 0, 0, 0, 0, 255, 255, 255, 127, 255, 255, 255, 127, 255, 127, 0, 0, 255, 127, 0, 0, 255, 127, 255, 255, 255, 255, 255, 127, 255, 127, 0, 0, 255, 127, 255, 255, 255, 127, 0, 0, 255, 255, 255, 127, 255, 127, 255, 255, 255, 255, 255, 127, 255, 127, 255, 255)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_yf8xb")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2d8f7"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o30tp"]
+atlas = ExtResource("3_cwg8d")
+region = Rect2(0, 128, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_isakk"]
+atlas = ExtResource("3_cwg8d")
+region = Rect2(128, 128, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aml1i"]
+atlas = ExtResource("3_cwg8d")
+region = Rect2(256, 128, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i4sos"]
+atlas = ExtResource("3_cwg8d")
+region = Rect2(384, 128, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_aw3w6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o30tp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_isakk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aml1i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i4sos")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="grass_block" type="MeshInstance3D"]
+mesh = SubResource("ArrayMesh_kb3ho")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+script = ExtResource("3_c2kqu")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+shape = SubResource("BoxShape3D_2d8f7")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.707107, -0.353553, 0.612372, 0, 0.866025, 0.5, -0.707107, -0.353553, 0.612372, 1.40195, 1.95173, 1.28035)
+projection = 1
+size = 5.0
+
+[node name="highlight" type="AnimatedSprite3D" parent="."]
+transform = Transform3D(0.75, 0, 0, 0, -3.27835e-08, 0.75, 0, -0.75, -3.27835e-08, 0, 1.02, 0)
+visible = false
+sprite_frames = SubResource("SpriteFrames_aw3w6")
+autoplay = "default"
+frame = 2
+frame_progress = 0.425122

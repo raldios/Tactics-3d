@@ -1,0 +1,54 @@
+[gd_scene load_steps=6 format=3 uid="uid://ciujyon5yjuht"]
+
+[ext_resource type="Texture2D" uid="uid://d0rm2e1enfhm2" path="res://models/Textures/RuinBlockUvsBig.png" id="1_g6y34"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6g7dc"]
+resource_name = "Material"
+cull_mode = 2
+shading_mode = 0
+albedo_texture = ExtResource("1_g6y34")
+texture_filter = 2
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_yf8xb"]
+_surfaces = [{
+"aabb": AABB(-0.5, 0, -0.5, 1.00001, 1.00001, 1),
+"format": 34896613377,
+"index_count": 18,
+"index_data": PackedByteArray(0, 0, 5, 0, 4, 0, 0, 0, 2, 0, 5, 0, 3, 0, 5, 0, 2, 0, 3, 0, 6, 0, 5, 0, 1, 0, 2, 0, 0, 0, 1, 0, 3, 0, 2, 0),
+"name": "Material",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 7,
+"vertex_data": PackedByteArray(254, 255, 254, 255, 0, 0, 0, 0, 254, 255, 0, 0, 0, 0, 0, 0, 254, 255, 254, 255, 255, 255, 0, 0, 254, 255, 0, 0, 255, 255, 0, 0, 0, 0, 254, 255, 0, 0, 0, 0, 0, 0, 254, 255, 255, 255, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_kb3ho"]
+resource_name = "dirt_block_Cube"
+_surfaces = [{
+"aabb": AABB(-0.5, 0, -0.5, 1.00001, 1.00001, 1),
+"attribute_data": PackedByteArray(255, 191, 255, 127, 255, 255, 255, 191, 255, 255, 255, 255, 255, 191, 255, 191, 255, 191, 255, 191, 255, 191, 255, 191, 255, 191, 255, 255, 255, 191, 255, 255, 255, 127, 255, 127, 255, 127, 255, 191, 255, 127, 255, 191, 255, 127, 255, 255),
+"format": 34896613399,
+"index_count": 18,
+"index_data": PackedByteArray(0, 0, 10, 0, 8, 0, 0, 0, 4, 0, 10, 0, 6, 0, 9, 0, 3, 0, 6, 0, 11, 0, 9, 0, 2, 0, 5, 0, 1, 0, 2, 0, 7, 0, 5, 0),
+"material": SubResource("StandardMaterial3D_6g7dc"),
+"name": "Material",
+"primitive": 3,
+"uv_scale": Vector4(2, 2, 0, 0),
+"vertex_count": 12,
+"vertex_data": PackedByteArray(254, 255, 254, 255, 0, 0, 255, 191, 254, 255, 254, 255, 0, 0, 255, 191, 254, 255, 0, 0, 0, 0, 255, 191, 254, 255, 254, 255, 255, 255, 255, 127, 254, 255, 254, 255, 255, 255, 255, 191, 254, 255, 254, 255, 255, 255, 255, 191, 254, 255, 0, 0, 255, 255, 255, 127, 254, 255, 0, 0, 255, 255, 255, 191, 0, 0, 254, 255, 0, 0, 255, 191, 0, 0, 254, 255, 255, 255, 255, 127, 0, 0, 254, 255, 255, 255, 255, 191, 0, 0, 0, 0, 255, 255, 255, 127, 255, 255, 255, 127, 255, 127, 0, 0, 255, 127, 0, 0, 255, 127, 255, 255, 255, 255, 255, 127, 255, 127, 0, 0, 255, 127, 255, 255, 255, 127, 0, 0, 255, 255, 255, 127, 255, 127, 255, 255, 255, 255, 255, 127, 255, 127, 255, 255)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_yf8xb")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2d8f7"]
+
+[node name="ruin_block" type="MeshInstance3D"]
+mesh = SubResource("ArrayMesh_kb3ho")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+shape = SubResource("BoxShape3D_2d8f7")
