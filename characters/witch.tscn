@@ -1,8 +1,9 @@
-[gd_scene load_steps=11 format=3 uid="uid://duw1p02tinavo"]
+[gd_scene load_steps=12 format=3 uid="uid://duw1p02tinavo"]
 
 [ext_resource type="Texture2D" uid="uid://difo4dr2nrx6h" path="res://sprites/VampireWalkCycleBig.png" id="1_7gifp"]
 [ext_resource type="Script" path="res://characters/pawn.gd" id="1_jm6x1"]
 [ext_resource type="PackedScene" uid="uid://c8p5wqdoax8r0" path="res://components/move_component.tscn" id="2_grvp1"]
+[ext_resource type="Script" path="res://components/health_component.gd" id="4_6fkkg"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qv08g"]
 atlas = ExtResource("1_7gifp")
@@ -73,3 +74,6 @@ autoplay = "idle"
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
 shape = SubResource("CylinderShape3D_tfjij")
+
+[node name="health_component" type="Node3D" parent="."]
+script = ExtResource("4_6fkkg")
