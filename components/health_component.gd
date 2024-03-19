@@ -25,7 +25,7 @@ func get_current_health():
 	
 func mod_current_health(modifier: int):
 	current_health += modifier
-	
+
 	if current_health < 0:
 		lgg.wrn(["Attempted to set <character> health to less than zero, setting to zero instead."])
 		current_health = 0
@@ -33,3 +33,18 @@ func mod_current_health(modifier: int):
 		lgg.wrn(['Attempted to set <character> health to more than max, setting to max_health: ', max_health, ' instead.'])
 		current_health = max_health
 		
+func set_max_health(new_max_health):
+	max_health = new_max_health
+	if current_health > max_health:
+		current_health = max_health
+	
+
+func get_max_health():
+	return max_health
+	
+
+func mod_max_health(modifier: int):
+	max_health += modifier
+	if current_health > max_health:
+		current_health = max_health
+	
