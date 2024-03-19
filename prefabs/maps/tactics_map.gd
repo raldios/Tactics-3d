@@ -5,10 +5,11 @@ var tiles: Dictionary
 const TILE_HIGHLIGHT = preload("res://prefabs/tile_highlight.tscn")
 @onready var terrain_cam = %terrain_cam
 @onready var tile_selector = $tile_selector
-@onready var focus = $"../focus"
+@onready var focus = $"../terrain_focus"
 
 var intersect_result
 var focus_position = null
+
 
 
 # Called when the node enters the scene tree for the first time.
@@ -16,6 +17,8 @@ func _ready():
 	read_cells()
 	create_points()
 	create_paths()
+	
+	
 	
 func _unhandled_input(event):
 	if event.is_action_pressed("accept"):
@@ -133,7 +136,6 @@ func on_accept_action(event):
 		lgg.wrn(['Result Dictionary has no position'])
 		lgg.wrn([intersect_result])
 		tile_selector.hide()
-		return
 	
 	var clicked_tile_coord = Vector2i(snapped(intersect_result.position.x, 1), snapped(intersect_result.position.z, 1))
 	var height = intersect_result.position.y

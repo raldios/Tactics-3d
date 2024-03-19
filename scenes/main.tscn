@@ -27,54 +27,12 @@ script = ExtResource("3_dk83t")
 
 [node name="witch" parent="pawn_controller" instance=ExtResource("3_61jft")]
 
-[node name="cam_focus" type="Node3D" parent="."]
-
-[node name="terrain_svc" type="SubViewportContainer" parent="cam_focus"]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-stretch = true
-stretch_shrink = 4
-
-[node name="SubViewport" type="SubViewport" parent="cam_focus/terrain_svc"]
-handle_input_locally = false
-gui_disable_input = true
-size = Vector2i(480, 270)
-render_target_update_mode = 4
-
-[node name="terrain_focus" type="Node3D" parent="cam_focus/terrain_svc/SubViewport"]
+[node name="terrain_focus" type="Node3D" parent="."]
 transform = Transform3D(0.707107, -0.353553, 0.612372, 0, 0.866025, 0.5, -0.707107, -0.353553, 0.612372, 0, 0, 0)
 
-[node name="terrain_cam" type="Camera3D" parent="cam_focus/terrain_svc/SubViewport/terrain_focus"]
+[node name="terrain_cam" type="Camera3D" parent="terrain_focus"]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 2.98023e-08, 0, -8.9407e-08, 1, 0, 0, 10)
-cull_mask = 1047553
-projection = 1
-size = 10.0
-
-[node name="sprite_svc" type="SubViewportContainer" parent="cam_focus"]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-stretch = true
-
-[node name="SubViewport" type="SubViewport" parent="cam_focus/sprite_svc"]
-transparent_bg = true
-handle_input_locally = false
-gui_disable_input = true
-size = Vector2i(1920, 1080)
-render_target_update_mode = 4
-
-[node name="sprite_focus" type="Node3D" parent="cam_focus/sprite_svc/SubViewport"]
-transform = Transform3D(0.707107, -0.353553, 0.612372, 0, 0.866025, 0.5, -0.707107, -0.353553, 0.612372, 0, 0, 0)
-
-[node name="sprite_cam" type="Camera3D" parent="cam_focus/sprite_svc/SubViewport/sprite_focus"]
-unique_name_in_owner = true
-transform = Transform3D(1, 0, 0, 0, 1, 2.98023e-08, 0, -8.9407e-08, 1, 0, 0, 10)
-cull_mask = 1047554
+cull_mask = 1047555
 projection = 1
 size = 10.0
