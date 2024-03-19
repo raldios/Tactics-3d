@@ -10,16 +10,12 @@ const TILE_HIGHLIGHT = preload("res://prefabs/tile_highlight.tscn")
 var intersect_result
 var focus_position = null
 
-
-
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	read_cells()
 	create_points()
 	create_paths()
-	
-	
-	
+
 func _unhandled_input(event):
 	if event.is_action_pressed("accept"):
 		on_accept_action(event)
@@ -80,7 +76,6 @@ func create_tiles(v3i_coords: Array[Vector3i]):
 			top = Vector3(v3i_coord.x, v3i_coord.y + 1, v3i_coord.z)
 		elif new_tile.type == "step":
 			top = Vector3(v3i_coord.x, v3i_coord.y + .5, v3i_coord.z)
-			
 		
 		new_tile['top'] = top
 		
@@ -106,8 +101,7 @@ func create_paths():
 				astar.connect_points(tile_data.point_id, point_id)
 			elif tile_data.height - neighbor.height == 1 and neighbor.type == 'step':
 				astar.connect_points(tile_data.point_id, point_id)
-			pass
-		
+
 func get_tile_neighbor_ids(center_tile_data):
 	var neighbor_coords = Array()
 	neighbor_coords.append(center_tile_data.coord + Vector2i(0, 1)) #north
@@ -136,13 +130,14 @@ func on_accept_action(event):
 		lgg.wrn(['Result Dictionary has no position'])
 		lgg.wrn([intersect_result])
 		tile_selector.hide()
+		return
 	
 	var clicked_tile_coord = Vector2i(snapped(intersect_result.position.x, 1), snapped(intersect_result.position.z, 1))
 	var height = intersect_result.position.y
 	lgg.dbg(['Clicked Coord:', clicked_tile_coord, 'Height: ', height])
 	
 	var valid_tile = get_tile_data_from_v2i(clicked_tile_coord)
-
+	
 	if valid_tile != null:
 		lgg.dbg([valid_tile.type])
 		tile_selector.move_selector(valid_tile.top)
