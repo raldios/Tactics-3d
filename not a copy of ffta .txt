@@ -1,0 +1,126 @@
+not a copy of ffta 
+ui stuff
+3 stats for hp stamina and magic bars 
+diff stats for damage 
+
+move and action play with stam bar aka AP via og fallout games
+
+damage types 
+focus- magic damage
+strength- broadsword, great sword, big rock etc. 
+finesse- rapier, dagger, bow etc
+
+diff reaction types based on diff attack types
+spend AP for reactions
+finesse- parrying(take less damage deal less damage)/ possible***take damage then you move
+strength- block damage(flat damage)/Counter Attack (take full damage deal full damage)
+focus- spell Counter- casting your own spell- basic elemental damage of your choice(choose when equipping not when casting)/ Mana shield (based on mana pool not on AP)
+
+defenses/ potency of reactions/ possibly 
+
+active battle system for reactions possibly
+
+low numbers for stats 
+
+light armor= more AP/ Low HP Buff
+heavy armor= less AP/ Big HP buff
+Mage clothing class- basic small buff can class into light or heavy armor
+armor affects appearance instead of class based
+
+feats/perks on level ups 
+
+generic characters with named characters 
+possibly no class system, build character via level up change appearance based on hats and armor
+
+skill tree similar to POE 
+
+diff species how it plays into gameplay- starting perk, not vastly different, affects gameplay and build potential possibly
+
+poison- damage over time
+Exhaustion -reduce max health status
+paralysis- status that disables your reactions
+statuses that halves a stat 
+weaknesses to certain types of damage
+
+2 to 3 armor pieces- separate sprite to be overlayed on base character
+non visible armor piece- amulet/ring/pendant/etc. 
+
+
+socketable item/ for learning abilities/ ability mastery- get a new scroll you start learning and can pass it through the team if you want. 
+possible stat for increasing proficiency for mastering ability possibly a perk
+
+
+Stats-
+Finesse- AP
+Focus- MP
+Strength- HP
+
+
+Skill Tree
+less perks more impactful ones
+3 trees Strength,Finesse,Mind
+Different Starts= Different Weapon Availability
+
+
+Perk Ideas: 
+Mind-
+-Blood Magic- No mana or less mana cost but spells cost hp
+-Reduced Health Pool Increased Spell Shield
+-Magic Specialization- Increase effectiveness with one element lose access to others 
+-Knockback Added for Staff Attacks
+
+
+Finesse 
+Increased AP for specific Finesse Abiliy
+Dual Wielding-stamina based/low stamina you will run out of dual attacks faster
+1 Free Movement per turn
+
+Strength-
+Minor Self Restore/ per turn based on strength can be percentage based
+
+
+
+Weapon Types/ 
+Strength-
+LongBlade (Pure Strength)- Knockback
+Spear (Leans Mind) -Piercing two range (phalanx Formation possibly) 
+Throwing Axe (Leans Finesse)-
+
+Finesse:
+Rapier (Leans Magic): Does HP damage + bonus % against MP
+Shortblade (Leans Strength)- Bonus Backstab
+Bow-(pureFinesse) Long range, cant attack next to you. 
+
+Mind: 
+Wand (Leans Finesse) - ranged attack, can attack directly next to you better with active spells. augment with perks 
+Staff (Leans Strength)- Melee, Increased Passives,
+Orb (pure Mind)- Can't attack/ increased spell efficiency/need to cast spells
+
+Spell Ideas:
+Mind
+Elemental Weapon- weapon does magic damage/ applied passively uses a section of mana bar. 
+
+Finesse:
+-Dash Back create distance and attack with bow
+
+Strength:
+-Can't move extra ap for attacks or extra defense or something
+-Charge:dash forward: Knockback or cause Paralysis- Less damage than attack in normal circumstances
+-Defend- No attack increased Reaction Capabilities
+
+
+Appearances
+Armor is the only thing that changes appearances.
+Main characters will have unique head on their sprite but armor still affects appearance.
+Generic Characters will have a helmet based on their armor choice. 
+
+
+Story: Adventuring Party- fight through a dungeon. Main character is player named slightly customizable hair type and color
+
+
+UI elements-
+
+Health Bar 
+AP bar
+Mana Bar
+
